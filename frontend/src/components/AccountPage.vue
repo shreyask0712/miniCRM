@@ -78,7 +78,22 @@
     
                     if (response.ok) {
                         const data = await response.json();
-                        accounts.value = data;
+                        
+                        if (data ) {
+                            const body = JSON.parse(data.body);
+                            console.log("Body: ", body);
+                
+                            accounts.value = body.records.map((record : any) => ({
+                                Id: record.Id,
+                                Name: record.Name,
+                                BillingStreet: record.BillingStreet || '',
+                                BillingCity: record.BillingCity || '',
+                                BillingState: record.BillingState || '',
+                                BillingPostalCode: record.BillingPostalCode || '',
+                                Website: record.Website || '',
+                            }))
+                        }
+
                     } else {
                         console.error('Failed to fetch accounts');
                     }
@@ -89,6 +104,7 @@
     
             const deleteAccounts = async(accountId: string) => {
                 try {
+                    console.log("Delete Id: ", `${accountId}`)
                     const response = await fetch(`http://localhost:3000/accounts/delete/${accountId}`, {
                         method: 'POST',
                         headers: {

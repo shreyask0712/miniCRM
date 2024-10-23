@@ -37,7 +37,6 @@
   <script lang="ts">
     import { defineComponent, ref, onMounted, onUpdated } from 'vue';
   
-  
   export default defineComponent({
     props: {
       selectedAccount: {
