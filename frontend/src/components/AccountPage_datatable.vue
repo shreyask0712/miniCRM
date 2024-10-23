@@ -30,7 +30,7 @@
       </DataTable>
   
 
-      <AccountModal2
+      <AccountModal
         :isVisible="showModal"
         :selectedAccount="selectedAccount"
         @close="showModal = false"
@@ -41,7 +41,7 @@
   
   <script lang="ts">
   import { onMounted, ref } from 'vue';
-  import AccountModal2 from './AccountModal2.vue';
+  import AccountModal from './AccountModal.vue';
   
   
   import Button from 'primevue/button';
@@ -60,7 +60,7 @@
   
   export default {
     components: {
-      AccountModal2,
+      AccountModal,
       Button, 
       DataTable, 
       Column, 

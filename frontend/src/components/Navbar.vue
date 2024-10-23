@@ -9,7 +9,9 @@
             <router-link to="/contacts">Contacts</router-link>
             <router-link to="/opportunities">Opportunities</router-link>
             
-            <UserMenu :user="currentUser" @logout="logout" />
+            <div class="name">
+                <UserMenu :user="currentUser" @logout="logout" />
+            </div>
         </div>
     </div>
 </template>
@@ -17,6 +19,7 @@
 <script lang="ts">
 import { ref } from 'vue';
 import UserMenu from './UserMenu.vue';
+import router from '../router';
 
 export default {
     components: {
@@ -30,6 +33,7 @@ export default {
       localStorage.removeItem('sessionId');
       localStorage.removeItem('serverUrl');
       location.reload();
+      router.push('/');
     };
 
     return { currentUser, logout };
