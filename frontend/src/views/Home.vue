@@ -1,6 +1,7 @@
 <template>
     <div class="home">
       <h1>Mini CRM</h1>
+
     </div>
   </template>
   
@@ -10,3 +11,6 @@
   };
   </script>
   
+  <style lang="css">
+  
+  </style>

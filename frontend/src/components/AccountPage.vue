@@ -89,7 +89,7 @@
     
             const deleteAccounts = async(accountId: string) => {
                 try {
-                    const response = await fetch(`http://localhost:3000/account/delete/${accountId}`, {
+                    const response = await fetch(`http://localhost:3000/accounts/delete/${accountId}`, {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -120,7 +120,7 @@
             }
     
             const saveAccount = async(accountData: Account) => {
-                const url = accountData.Id ? `http://localhost:3000/account/update/${accountData.Id}` : 'http://localhost:3000/account/create';
+                const url = accountData.Id ? `http://localhost:3000/accounts/update/${accountData.Id}` : 'http://localhost:3000/accounts/create';
                 const method = 'POST';
     
                 try {
