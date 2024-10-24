@@ -89,11 +89,11 @@ export default {
 
 <style lang="css" scoped>
  .p-field {
-    margin-bottom: 1rem; /* Adjust the value as needed */
+    margin-bottom: 1rem; 
   }
 
   .p-field label {
     display: block;
-    margin-bottom: 0.5rem; /* Space between label and input */
+    margin-bottom: 0.5rem; 
   }
 </style>
