@@ -37,7 +37,7 @@
         @save="saveAccount"
       />
     </div>
-  </template>
+</template>
   
   <script lang="ts">
   import { onMounted, ref } from 'vue';
